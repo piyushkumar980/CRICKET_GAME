@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRICKET GAME</title>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+    }
+
+    button {
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>BAT BALL STUMP GAME</h1>
+
+  <button onclick="
+
+   generateComputerChoice();
+// iske liye niche script tag me ek function bnaye h sbme cannot use bcoz same code nhi chal raha tha mera as per video
+
+let resultMsg;
+if(computerChoice==='ball'){
+  score.won++;
+  resultMsg='USER WONS THE MATCH';
+}
+else if(computerChoice==='bat'){
+  score.tie++;
+  resultMsg='THIS IS A TIE';
+}
+else{
+  score.lost++;
+  resultMsg='COMPUTER WONS THE MATCH';
+}
+alert(`User Have Chosen Bat AND Computer's Choice is ${computerChoice} 
+
+${ resultMsg}
+
+Won: ${score.won}, Lost: ${score.lost}, Tie: ${score.tie}`);
+">
+    BAT
+  </button>
+
+  <button onclick="
+    randomNumber= Math.random()*3;
+    let ComputerChoice;
+    
+    if(randomNumber>0 && randomNumber<=1){
+      ComputerChoice='bat';
+    }
+    else if(randomNumber >1 && randomNumber<=2){
+      ComputerChoice='ball';
+    }
+    else{
+      ComputerChoice='stump';
+    }
+    
+    let ResultMsg;
+    if(ComputerChoice==='stump'){
+      score.won++;
+      ResultMsg='USER WONS THE MATCH';
+    }
+    else if(ComputerChoice==='ball'){
+      score.tie++;
+      ResultMsg='THIS IS A TIE';
+    }
+    else{
+      score.lost++;
+      ResultMsg='COMPUTER WONS THE MATCH';
+    }
+    alert(`User Have Chosen Ball AND Computer's Choice is ${ComputerChoice} 
+    
+    ${ ResultMsg}
+    
+    Won: ${score.won}, Lost: ${score.lost}, Tie: ${score.tie}`);
+    ">BALL</button>
+
+
+  <button onclick="
+     randomNumber= Math.random()*3;
+     let systemChoice;
+    
+    if(randomNumber>0 && randomNumber<=1){
+      systemChoicee='bat';
+    }
+    else if(randomNumber >1 && randomNumber<=2){
+      systemChoice='ball';
+    }
+    else{
+      systemChoice='stump';
+    }
+    
+     let Result;
+    if( systemChoice==='bat'){
+      score.won ++;
+      Result='USER WONS THE MATCH';
+    }
+    else if( systemChoice==='stump'){
+      score.tie ++;
+      Result='THIS IS A TIE';
+    }
+    else{
+      score.lost ++;
+      Result='COMPUTER WONS THE MATCH';
+    }
+    alert(`User Have Chosen Stump AND Computer's Choice is ${ systemChoice}  
+
+     ${  Result}
+
+     Won: ${score.won}, Lost: ${score.lost}, Tie: ${score.tie}`);
+    ">STUMP</button>
+
+  <script>
+    let score = {
+      won: 0,
+      lost: 0,
+      tie: 0,
+    };
+    let computerChoice;
+    function generateComputerChoice() {
+
+      let randomNumber = Math.random() * 3;
+
+      if (randomNumber > 0 && randomNumber <= 1) {
+        computerChoice = 'bat';
+      }
+      else if (randomNumber > 1 && randomNumber <= 2) {
+        computerChoice = 'ball';
+      }
+      else {
+        computerChoice = 'stump';
+      }
+    }
+
+  </script>
+</body>
+
+</html>
